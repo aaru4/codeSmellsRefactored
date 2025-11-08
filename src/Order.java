@@ -1,3 +1,4 @@
+import java.util.logging.Logger;
 import java.util.List;
 
 public class Order {
@@ -101,9 +102,9 @@ public class Order {
     }
 
    public void printOrder() {
-        System.out.println("Order Details:");
+        logger.info("Order Details:");
         for (Item item : items) {
-            System.out.println(item.getName() + " - " + item.getPrice());
+            logger.info(item.getName() + " - " + item.getPrice());
         }
    }
 
