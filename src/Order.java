@@ -2,6 +2,7 @@ import java.util.logging.Logger;
 import java.util.List;
 
 public class Order {
+    private static final Logger logger = Logger.getLogger(Order.class.getName());
     private List<Item> items;
     private String customerName;
     private String customerEmail;

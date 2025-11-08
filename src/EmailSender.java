@@ -1,6 +1,7 @@
 import java.util.logging.Logger;
 public class EmailSender {
-      private EmailSender() {
+    private static final Logger logger = Logger.getLogger(EmailSender.class.getName());
+    private EmailSender() {
         throw new IllegalStateException("Utility class, must not be instantiated!");
       }
 
