@@ -43,15 +43,19 @@ public class Order {
     }
 
     public void sendConfirmationEmail() {
-        String message = "Thank you for your order, " + customerName + "!\n\n" +
-                "Your order details:\n";
+        StringBuilder messageBuilder = new StringBuilder();
+        messageBuilder.append("Thank you for your order, ")
+                .append(customerName)
+                .append("!\n\nYour order details:\n");
         for (Item item : items) {
-            message += item.getName() + " - " + item.getPrice() + "\n";
+            messageBuilder.append(item.getName())
+                    .append(" - ")
+                    .append(item.getPrice())
+                    .append("\n");
         }
-        message += "Total: " + calculateTotalPrice();
-        EmailSender.sendEmail(customerEmail, "Order Confirmation", message);
+        messageBuilder.append("Total: ").append(calculateTotalPrice());
+        EmailSender.sendEmail(customerEmail, "Order Confirmation", messageBuilder.toString());
     }
-
 
     public void addItem(Item item) {
         items.add(item);
