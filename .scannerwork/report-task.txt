@@ -1,0 +1,6 @@
+projectKey=refactoring
+serverUrl=http://localhost:9000
+serverVersion=25.11.0.114957
+dashboardUrl=http://localhost:9000/dashboard?id=refactoring
+ceTaskId=ecaaf568-72ae-4bfa-84bd-771ec63d33d5
+ceTaskUrl=http://localhost:9000/api/ce/task?id=ecaaf568-72ae-4bfa-84bd-771ec63d33d5
